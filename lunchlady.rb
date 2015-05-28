@@ -8,12 +8,22 @@ class LunchLady
     
   end
 
-  def user_input()
+  def user_input
     puts "~~~~~~Welcome to Chez Paris~~~~~~"
     puts "What would you like to order?"
     create_menu
+    @order = gets.chomp
   end
 
+  def computer_repeat
+    puts "You ordered #{ @order }."
+    puts "k thx bai."
+  end
+
+  def run
+    user_input
+    computer_repeat
+  end
 end
 
-LunchLady.new.user_input
+LunchLady.new.run

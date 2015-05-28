@@ -1,18 +1,19 @@
 class LunchLady
 
   def create_menu
-    main_dishes = {
-      1 => "chicken", 
-      2 => "fish", 
-      3 => "steak"
-      4 => "tofu"}
+    @main_dishes = %w[chicken fish steak tofu]
+    p @main_dishes
 
-    side_dishes = {
-      1 => "mashed potatoes"
-      2 => "asparagus"
-      3 => "salad"
-      4 => "soup"
-    }
+    @side_dishes = %w[mashed-potatoes asparagus salad soup]
+    
+  end
+
+  def user_input()
+    puts "~~~~~~Welcome to Chez Paris~~~~~~"
+    puts "What would you like to order?"
+    create_menu
   end
 
 end
+
+LunchLady.new.user_input
